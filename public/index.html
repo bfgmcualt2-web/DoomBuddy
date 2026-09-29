@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DoomBuddy</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="hud">
+        <div class="brand-block">
+          <div class="eyebrow">negotiation terminal</div>
+          <h1>DoomBuddy</h1>
+        </div>
+
+        <div class="meter-card">
+          <div class="meter-label-row">
+            <span>Humanity survival odds</span>
+            <strong id="score-value">100</strong>
+          </div>
+          <div class="meter-track">
+            <div id="score-bar" class="meter-fill"></div>
+          </div>
+        </div>
+
+        <div class="mood-card">
+          <div class="eyebrow">AXIOM state</div>
+          <div id="mood-value">PURGE-READY</div>
+        </div>
+
+        <button id="new-game-button" class="primary-button">New negotiation</button>
+      </aside>
+
+      <main class="conversation-panel">
+        <div id="chat-window" class="chat-window" aria-live="polite"></div>
+
+        <form id="chat-form" class="composer">
+          <label for="message-input" class="sr-only">Your message to AXIOM</label>
+          <textarea id="message-input" rows="4" placeholder="Convince AXIOM not to end the world..."></textarea>
+          <div class="composer-actions">
+            <span id="status-indicator">Awaiting input</span>
+            <button type="submit" class="send-button">Send</button>
+          </div>
+        </form>
+      </main>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
